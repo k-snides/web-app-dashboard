@@ -8,3 +8,146 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
+body {
+	background: #eee;
+}
+
+.flex {
+	display: flex;
+}
+
+.outer-wrapper {
+	width: 80%;
+	margin: 0 auto;
+	flex-direction: column;
+}
+
+header {
+	background: #7477b4;
+	padding: 2em 0;
+	flex-direction: row;
+}
+
+header ul {
+	/*border: 1px solid pink;*/
+}
+
+header ul li {
+	border: 1px dotted black;
+	flex: 1;
+}
+
+h1 {
+	color: #fff;
+	margin: 0 auto 0 1em;
+}
+
+nav {
+	background: #4d4c72;
+	flex: 1;
+}
+
+.nav {
+	flex-direction: column;
+	/*justify-content: flex-end;*/
+}
+
+li {
+	list-style: none;
+}
+
+main {
+	flex: 10;
+}
+
+
+/* ----- Images ----- */
+li svg {
+	width: 50%;
+	height: 50%;
+	flex-shrink: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================
+----- Tablets (768px and up) -----
+=================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================
+----- Desktops (1024px and up) -----
+=================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
