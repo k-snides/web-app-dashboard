@@ -1,5 +1,5 @@
 /* ===================================================
------ Mobile First -----
+-------------------- Mobile First --------------------
 =================================================== */
 
 /* ----- GENERAL STYLES ----- */
@@ -23,51 +23,119 @@ body {
 	flex-direction: column;
 }
 
-header {
-	background: #7477b4;
-	padding: 2em 0;
-	flex-direction: row;
-}
-
-header ul {
-	/*border: 1px solid pink;*/
-}
-
-header ul li {
-	border: 1px dotted black;
-	flex: 1;
-}
-
-h1 {
-	color: #fff;
-	margin: 0 auto 0 1em;
-}
-
-nav {
-	background: #4d4c72;
-	flex: 1;
-}
-
-.nav {
-	flex-direction: column;
-	/*justify-content: flex-end;*/
+.inner-wrapper {
+	/*border: 2px solid red;*/
 }
 
 li {
 	list-style: none;
 }
 
-main {
-	flex: 10;
+
+/* ----- ===== HEADER section ===== ----- */
+header {
+	background: #7477b4;
+	padding: 2em 1em;	
 }
 
+h1 {
+	margin-right: auto;
+	/*align-self: center;*/
+}
 
-/* ----- Images ----- */
-li svg {
-	width: 50%;
+header ul {
+	/*flex: 1;*/
+	/*flex-direction: column;*/
+	/*height: 100%;*/
+}
+
+header li {
+	align-self: center;
+	/*flex: 0 1 auto;*/
+	padding: 0 1em;
+	border: 1px solid black;
+}
+
+header li:first-child {
+	background: green;
+	/*flex: 1 0 auto;*/
+}/* ----- end HEADER section ----- */
+
+
+/* ----- ===== NAVIGATION section ===== ----- */
+nav {
+	background: #4d4c72;
+}
+
+.nav {
+	flex-direction: column;
+	color: #fff;
+}
+
+nav li {
+	margin: 0 1em;
+	padding: 1em 0.5em;
+	border: 1px solid pink;
+}
+
+/* ----- Navigation Images ----- */
+nav li svg {
+	/*width: 50%;
 	height: 50%;
-	flex-shrink: 0;
+	border: 1px solid pink;
+	margin: 0 auto;*/
+}/* ----- end NAVIGATION section ----- */
+
+
+/* ----- ===== MAIN section ===== ----- */
+main {
+	flex-direction: column;
+	background: #fff;
+	/*padding: 0 1em;*/
+	
 }
+
+main ul li {
+	padding: 1.5em 2em 1.5em 1em;
+	/*margin: 0 1;*/
+	border-right: 2px solid #dfdfdf;
+	border-bottom: 1px solid white;
+	display: inline-block;
+}
+
+.main-section-header {
+	justify-content: space-between;
+	background: rgb(240, 240, 240);
+	/*border-bottom: 1px solid #dfdfdf;*/
+}
+
+#search {
+	display: inline-block;
+	align-self: center;
+	margin: 0 1em;
+	/*border: 1px solid purple;*/
+}
+
+input[type="search"] {
+	width: 100%;
+}
+
+.pages {
+	border-bottom: #fff;
+}
+
+.pages,
+#search {
+	background: #fff;
+}
+
+section {
+	margin: 1em 1em;
+}
+
+/* ----- end MAIN section ----- */
+
+
 
 
 
@@ -93,7 +161,7 @@ li svg {
 
 
 /* ===================================================
------ Tablets (768px and up) -----
+--------------- Tablets (768px and up) ---------------
 =================================================== */
 
 
@@ -129,7 +197,7 @@ li svg {
 
 
 /* ===================================================
------ Desktops (1024px and up) -----
+--------------- Desktops (1024px and up) -------------
 =================================================== */
 
 
