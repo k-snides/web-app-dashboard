@@ -18,7 +18,7 @@ body {
 }
 
 .outer-wrapper {
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 	flex-direction: column;
 }
@@ -34,19 +34,23 @@ li {
 
 /* ----- ===== HEADER section ===== ----- */
 header {
+	/*flex-direction: column;*/
 	background: #7477b4;
 	padding: 2em 1em;	
 }
 
-h1 {
-	margin-right: auto;
+header h1 {
+	font-size: 1.5em;
 	/*align-self: center;*/
+	margin-right: auto;
 }
 
 header ul {
 	/*flex: 1;*/
 	/*flex-direction: column;*/
 	/*height: 100%;*/
+	/*border: 1px solid red;*/
+	align-self: center;
 }
 
 header li {
@@ -65,6 +69,8 @@ header li:first-child {
 /* ----- ===== NAVIGATION section ===== ----- */
 nav {
 	background: #4d4c72;
+	/*visibility: hidden;*/
+	/*display: none !important;*/
 }
 
 .nav {
@@ -73,9 +79,14 @@ nav {
 }
 
 nav li {
-	margin: 0 1em;
+	/*margin: 0 1em;*/
 	padding: 1em 0.5em;
-	border: 1px solid pink;
+	/*border: 1px solid pink;*/
+	width: 100%;
+}
+
+nav li.active {
+	border-left: 3px solid #85DB80;
 }
 
 /* ----- Navigation Images ----- */
@@ -92,36 +103,48 @@ main {
 	flex-direction: column;
 	background: #fff;
 	/*padding: 0 1em;*/
-	
+	/*border: 1px solid red;*/
+	flex: 1 0 auto;
 }
 
-main ul li {
-	padding: 1.5em 2em 1.5em 1em;
-	/*margin: 0 1;*/
-	border-right: 2px solid #dfdfdf;
+.main-section-header ul li {
+	padding: 1.5em 1em 1.5em 1em;
+	border-right: 2px solid #d1d1d1;
 	border-bottom: 1px solid white;
 	display: inline-block;
 }
 
 .main-section-header {
-	justify-content: space-between;
 	background: rgb(240, 240, 240);
-	/*border-bottom: 1px solid #dfdfdf;*/
+	border-right: 1px solid #d1d1d1;
+	/*justify-content: space-around;*/
 }
 
 #search {
 	display: inline-block;
 	align-self: center;
-	margin: 0 1em;
-	/*border: 1px solid purple;*/
 }
 
 input[type="search"] {
-	width: 100%;
+	flex: 1;
+}
+
+form {
+	/*border: 1px solid #d1d1d1;*/
+	/*margin: 0 1em 0 70%;*/
+	/*border-bottom: 1px solid #d1d1d1;*/
+	/*border: 1px solid orange;*/
+	/*padding: 1.5em 2em 1.5em 1em;*/
+	/*margin-left: 70%;*/
+	/*width: 100%;*/
+	flex: 1;
 }
 
 .pages {
-	border-bottom: #fff;
+	/*border-bottom: #fff;*/
+	/*border: 1px solid blue;*/
+	/*margin-right: auto;*/
+	/*flex: 1;*/
 }
 
 .pages,
@@ -130,8 +153,235 @@ input[type="search"] {
 }
 
 section {
-	margin: 1em 1em;
+	flex: 1;
+	padding: 1em 1em;
 }
+
+section h3 {
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #bbb;
+}
+
+/* ----- Alert Section ----- */
+#alert {
+	justify-content: stretch;
+	background: #7477b4;
+	color: #fff;
+	margin: 1em 1em
+}
+#alert p {
+	/*padding: 1%;*/
+	flex: 1;
+}
+/* ----- end Alert Section ----- */
+
+
+/* ----- Traffic Section ----- */
+section.traffic-section {
+	padding-bottom: 2em;
+}
+
+#traffic {
+	justify-content: space-between;
+}
+
+#traffic ul li {
+	display: inline-block;
+	margin-left: 2em;
+}
+
+.traffic-chart {
+	background: #e2e3f6;
+	height: 200px;
+	width: 100%;
+}
+/* ----- end Traffic Section ----- */
+
+
+/* ----- Daily Traffic - Mobile Users Section ----- */
+#daily-traffic-mobile-users {
+	border-style: solid; 
+	border-width: 1px 0 1px 0;
+	border-color: #d1d1d1;
+}
+
+#daily-traffic-mobile-users section {
+	padding-bottom: 2em;
+}
+
+#daily-traffic-mobile-users section:first-child {
+	border-right: 1px solid #d1d1d1;
+}
+
+.daily-traffic-chart,
+.mobile-users-chart {
+	background: #e2e3f6;
+	height: 200px;
+	width: 100%;
+}
+/* ----- end Daily Traffic - Mobile Users Section ----- */
+
+
+/* ----- Social Stats Section ----- */
+section.social-stats {
+	border-bottom: 1px solid #d1d1d1;
+	padding-bottom: 2em;
+}
+
+#social-stats {
+	justify-content: space-between;
+}
+
+.social {
+	background: #e2e3f6;
+	height: 100px;
+	width: 30%;
+	border-radius: 5px;
+}
+
+.twitter,
+.facebook,
+.google {
+	border: 1px solid #d1d1d1;
+}
+/* ----- end Social Stats Section ----- */
+
+
+/* ----- New Members - Recent Activity Section ----- */
+#new-members-recent-activity {
+	border-style: solid; 
+	border-width: 0 0 1px 0;
+	border-color: #d1d1d1;
+}
+
+#new-members-recent-activity section {
+	padding-bottom: 1em;
+}
+
+#new-members-recent-activity section:first-child {
+	border-right: 1px solid #d1d1d1;
+}
+
+.new-members,
+.recent-activity {
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.new-members p {
+	
+	padding: 1em 0;
+	flex: 1;
+	/* flex: 1 0 80% */
+}
+
+/*.new-members span {
+	flex: 1 0 20%;
+	align-self: center;
+	border-bottom: 1px solid #d1d1d1;
+}*/
+
+.new-members p,
+.recent-activity p {
+	border-bottom: 1px solid #d1d1d1;
+}
+
+
+.new-members p:last-child,
+.recent-activity p:last-child {
+	border: none;
+}
+
+.recent-activity p {
+	padding: 1em 0;
+}
+
+/* ----- end New Members - Recent Activity Section ----- */
+
+
+/* ----- New Members - Settings Section ----- */
+#message-user-settings {
+	margin-bottom: 2em;
+}
+
+#message-user-settings section:first-child {
+	border-right: 1px solid #d1d1d1;
+}
+
+.message-users,
+.message-users form {
+	flex-direction: column;
+}
+
+input {
+	padding: 1.2em 0;
+}
+
+input[type="text"],
+textarea,
+select {
+	background: #fbfbfb;
+	margin: 1em 0;
+	border-radius: 5px;
+}
+
+button,
+button[type="submit"] {
+	background: #7477b4;
+	color: #fff;
+	border-radius: 5px;
+	padding: 1em 0;
+	text-transform: uppercase;
+}
+
+input::placeholder,
+textarea::placeholder {
+	padding: 1em;
+}
+
+.email-notification,
+.profile-option {
+	justify-content: flex-start;
+	margin: 1.3em 0;
+}
+
+.email-notification p,
+.profile-option p {
+	flex: 1;
+	align-self: center;
+}
+
+.email-notification button,
+.profile-option button {
+	flex: 1;
+	/*margin-left: auto;*/
+	align-self: center;
+}
+
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 1em;
+}
+
+.settings {
+	flex-direction: column;
+}
+
+.save-buttons {
+	justify-content: space-between;
+}
+#save {
+	width: 45%;
+}
+#cancel {
+	width: 45%;
+	background: #b2b2b2;
+}
+/* ----- end New Members - Settings Section ----- */
+
 
 /* ----- end MAIN section ----- */
 
@@ -164,7 +414,30 @@ section {
 --------------- Tablets (768px and up) ---------------
 =================================================== */
 
+@media screen and (min-width: 768px) {
+	
+	/* ----- GENERAL STYLES ----- */
+	
+	/* ----- ===== HEADER section ===== ----- */
+	/*header {
+		flex-direction: row;
+	}
+	
+	header h1 {
+		font-size: 2em;
+		margin-right: auto;
+	}*/
 
+	/* ----- end HEADER section ----- */
+
+
+
+	/* ----- ===== NAVIGATION section ===== ----- */
+	/*nav {
+		display: block !important;
+	}*//* ----- end NAVIGATION section ----- */
+
+}
 
 
 
@@ -200,11 +473,23 @@ section {
 --------------- Desktops (1024px and up) -------------
 =================================================== */
 
+/*@media screen and (min-width: 1024px) {*/
+	
+	/* ----- GENERAL STYLES ----- */
+	/*.outer-wrapper {
+		width: 80%;
+	}*/
+	
+	/* ----- ===== HEADER section ===== ----- */
+
+	/* ----- end HEADER section ----- */
 
 
 
-
-
+	/* ----- ===== NAVIGATION section ===== ----- */
+	
+	/* ----- end NAVIGATION section ----- */
+/*}*/
 
 
 
