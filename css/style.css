@@ -76,13 +76,14 @@ nav {
 .nav {
 	flex-direction: column;
 	color: #fff;
+	
 }
 
 nav li {
 	/*margin: 0 1em;*/
-	padding: 1em 0.5em;
+	padding: 1em 1em;
 	/*border: 1px solid pink;*/
-	width: 100%;
+	/*width: 100%;*/
 }
 
 nav li.active {
@@ -238,21 +239,53 @@ section.social-stats {
 	padding-bottom: 2em;
 }
 
-#social-stats {
+.social-stats {
 	justify-content: space-between;
 }
 
-.social {
-	background: #e2e3f6;
-	height: 100px;
+.social-stats img {
+	align-self: center;
+	padding: 0%;
+	height: 50%;
 	width: 30%;
-	border-radius: 5px;
+	margin: 0 1em 0 0;
+	/*background: green;*/
+	/*border-radius: 50%;*/
 }
 
-.twitter,
+.social {
+	background: #fbfbfb;
+	/*flex: 1 1 30%;*/
+	border-radius: 5px;
+	border: 1px solid #d1d1d1;
+	padding: 0 1em;
+	width: 30%;
+}
+
+
+/*.social-icon-bcg {
+	background: #7477b4;
+	padding: 10%;
+	border-radius: 50%;
+	align-self: center;
+}*/
+
+/*.twitter,
 .facebook,
 .google {
-	border: 1px solid #d1d1d1;
+	fill: #bbb;
+}*/
+
+.social-info {
+	flex-direction: column;
+	/*padding: 1em 0 1em 3em;*/
+	align-self: center;
+}
+.social-info h4 {
+	color: #7477b4;
+}
+.social-info p {
+	font-size: 3em;
 }
 /* ----- end Social Stats Section ----- */
 
