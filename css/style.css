@@ -31,12 +31,17 @@ li {
 	list-style: none;
 }
 
+img {
+	/*max-width: 100%;*/
+}
+
 
 /* ----- ===== HEADER section ===== ----- */
 header {
 	/*flex-direction: column;*/
 	background: #7477b4;
 	padding: 2em 1em;	
+	width: 100%;
 }
 
 header h1 {
@@ -234,9 +239,9 @@ section.traffic-section {
 
 
 /* ----- Social Stats Section ----- */
-section.social-stats {
+section#social-stats {
 	border-bottom: 1px solid #d1d1d1;
-	padding-bottom: 2em;
+	padding-bottom: 3em;
 }
 
 .social-stats {
@@ -245,12 +250,12 @@ section.social-stats {
 
 .social-stats img {
 	align-self: center;
-	padding: 0%;
-	height: 50%;
+	padding: 5% 0%;
+	height: 70%;
 	width: 30%;
-	margin: 0 1em 0 0;
-	/*background: green;*/
-	/*border-radius: 50%;*/
+	margin: 0 2em 0 0;
+	background: #7477b4;
+	border-radius: 50%;
 }
 
 .social {
@@ -262,20 +267,6 @@ section.social-stats {
 	width: 30%;
 }
 
-
-/*.social-icon-bcg {
-	background: #7477b4;
-	padding: 10%;
-	border-radius: 50%;
-	align-self: center;
-}*/
-
-/*.twitter,
-.facebook,
-.google {
-	fill: #bbb;
-}*/
-
 .social-info {
 	flex-direction: column;
 	/*padding: 1em 0 1em 3em;*/
@@ -286,6 +277,7 @@ section.social-stats {
 }
 .social-info p {
 	font-size: 3em;
+	color: #666;
 }
 /* ----- end Social Stats Section ----- */
 
