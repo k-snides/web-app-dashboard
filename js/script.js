@@ -71,7 +71,63 @@ $(function() {
 
 
 
+	$.ajax({
+	  url: 'https://randomuser.me/api/?results=4',
+	  dataType: 'json',
+	  success: function(data) {
+	    console.log(data.results.length);
+	    for (let i = 0; i < data.results.length; i++) {
 
+	    	let date = new Date();
+	    	let day = date.getDate();
+	    	let month = date.getMonth() + 1;
+	    	let fullYear = date.getFullYear().toString();
+	    	let year = fullYear.substr(-2);
+
+	    	if (month >= 1 && month <= 9) {
+	    		month = "0" + month;
+	    	}
+
+	    	let $newMembers = $('.new-members');
+	    	let $recentActivity = $('.recent-activity');
+
+
+	    	$newMembers.append(`
+	    		<div class="new-members-group flex">
+						<img src="${data.results[i].picture.thumbnail}" />
+						<p>
+							${data.results[i].name.first} ${data.results[i].name.last} <br />
+							<span class="email">
+								${data.results[i].email}
+							</span>
+						</p>
+						<p class="date">
+							${day}/${month}/${year}
+						</p>
+					</div>
+	    	`);
+
+	    	$recentActivity.append(`
+	    		<div class="recent-activity-group flex">
+						<img src="${data.results[i].picture.thumbnail}" />
+						<p>
+							${data.results[i].name.first} ${data.results[i].name.last} said a bunch of junk<br />
+							<span class="time-ago">
+								4 hours ago
+							</span>
+						</p>
+						<p class="right-caret">
+							
+						</p>
+					</div>
+	    	`);
+	    	
+
+
+	    	
+	    }
+	  }
+	});
 	
 
 
