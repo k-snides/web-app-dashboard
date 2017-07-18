@@ -78,6 +78,8 @@ $(function() {
 	    console.log(data.results.length);
 	    for (let i = 0; i < data.results.length; i++) {
 
+	    	// TODO: turn to function
+	    	// https://stackoverflow.com/questions/17306830/how-to-get-2-digit-year-w-javascript
 	    	let date = new Date();
 	    	let day = date.getDate();
 	    	let month = date.getMonth() + 1;

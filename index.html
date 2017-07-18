@@ -297,18 +297,34 @@
 							</form>
 						</section>
 						
+
 						<section class="settings flex">
 							<h3>Settings</h3>
 
 							<div class="email-notification flex">
 								<p>Send Email Notification</p>
-								<button>ON/OFF</button>
-							</div>
+								
+								<div class="email-onoffswitch">
+								    <input type="checkbox" name="email-onoffswitch" class="email-onoffswitch-checkbox" id="email-myonoffswitch" checked>
+								    <label class="email-onoffswitch-label" for="email-myonoffswitch">
+								        <span class="email-onoffswitch-inner"></span>
+								        <span class="email-onoffswitch-switch"></span>
+								    </label>
+								</div>
+							</div><!-- /.email-notification flex -->
+
 
 							<div class="profile-option flex">
 								<p>Set Profile to Public</p>
-								<button>ON/OFF</button>
-							</div>
+								
+								<div class="profile-onoffswitch">
+								    <input type="checkbox" name="profile-onoffswitch" class="profile-onoffswitch-checkbox" id="profile-myonoffswitch" checked>
+								    <label class="profile-onoffswitch-label" for="profile-myonoffswitch">
+								        <span class="profile-onoffswitch-inner"></span>
+								        <span class="profile-onoffswitch-switch"></span>
+								    </label>
+								</div>
+							</div><!-- /.profile-notification flex -->
 
 							<select name="timezone" id="timezone">
 								<option value="" disabled selected hidden>Select Timezone</option>

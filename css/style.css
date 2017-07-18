@@ -393,6 +393,10 @@ button[type="submit"] {
 	border-radius: 5px;
 	padding: 1em 0;
 	text-transform: uppercase;
+	font-size: 1em;
+}
+button[type="submit"] {
+	margin-top: 0.7em;
 }
 
 input::placeholder,
@@ -403,27 +407,83 @@ textarea::placeholder {
 .email-notification,
 .profile-option {
 	justify-content: flex-start;
-	margin: 1.3em 0;
+	margin: 1em 0;
 }
 
 .email-notification p,
 .profile-option p {
-	flex: 1;
+	align-self: center;
+	width: 40%;
+}
+
+.email-notification .onoffswitch,
+.profile-option .onoffswitch {
 	align-self: center;
 }
 
-.email-notification button,
-.profile-option button {
-	flex: 1;
-	/*margin-left: auto;*/
-	align-self: center;
+/* --- email on/off switch ---  */
+.email-onoffswitch, 
+.profile-onoffswitch {
+    position: relative; width: 100px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
+.email-onoffswitch-checkbox,
+.profile-onoffswitch-checkbox {
+    display: none;
+}
+.email-onoffswitch-label,
+.profile-onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #CACACE; border-radius: 20px;
+}
+.email-onoffswitch-inner,
+.profile-onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.email-onoffswitch-inner:before, .email-onoffswitch-inner:after,
+.profile-onoffswitch-inner:before, .profile-onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 16px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.email-onoffswitch-inner:before,
+.profile-onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #7477B4; color: #FFFFFF;
+}
+.email-onoffswitch-inner:after,
+.profile-onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.email-onoffswitch-switch,
+.profile-onoffswitch-switch {
+    display: block; width: 25px; margin: 5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 66px;
+    border: 2px solid #CACACE; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.email-onoffswitch-checkbox:checked + .email-onoffswitch-label .email-onoffswitch-inner,
+.profile-onoffswitch-checkbox:checked + .profile-onoffswitch-label .profile-onoffswitch-inner {
+    margin-left: 0;
+}
+.email-onoffswitch-checkbox:checked + .email-onoffswitch-label .email-onoffswitch-switch,
+.profile-onoffswitch-checkbox:checked + .profile-onoffswitch-label .profile-onoffswitch-switch {
+    right: 0px; 
+}/* --- end email on/off switch ---  */
 
-select{
+select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 1em;
+  padding: 1.5em 1em;
+  margin: 2em 0 2.5em 0;
 }
 
 .settings {
@@ -440,6 +500,15 @@ select{
 	width: 45%;
 	background: #b2b2b2;
 }
+
+
+
+/* https://proto.io/freebies/onoff/ */
+
+
+
+
+
 /* ----- end New Members - Settings Section ----- */
 
 
