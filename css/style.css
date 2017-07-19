@@ -220,11 +220,20 @@ section h3 {
 	justify-content: stretch;
 	background: #7477b4;
 	color: #fff;
-	margin: 1em 1em
+	margin: 1em 1em;
 }
 #alert p {
 	/*padding: 1%;*/
 	flex: 1;
+	align-self: center;
+}
+#alert .close-btn {
+	font-size: 1.5em;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+#alert .close-btn:hover {
+	color: #000;
 }
 /* ----- end Alert Section ----- */
 

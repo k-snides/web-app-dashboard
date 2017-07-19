@@ -1,5 +1,17 @@
 $(function() {
 
+
+
+	// --- Close alert box ---
+	$('.close-btn').on("click", function() {
+		$('#alert').slideUp();
+		$('.notification-notice').fadeOut()
+	});
+	// --- Close alert box ---
+
+
+
+
 	// --- Website Traffic Line Chart ---
 	var wtlc = document.getElementById('website-traffic').getContext('2d');
 
