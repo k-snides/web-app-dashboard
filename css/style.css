@@ -11,6 +11,7 @@
 
 body {
 	background: #eee;
+	font-family: 'Roboto', sans-serif;
 }
 
 .flex {
@@ -40,14 +41,20 @@ img {
 header {
 	/*flex-direction: column;*/
 	background: #7477b4;
-	padding: 2em 1em;	
+	padding: 1.5em 1em 1.5em 1em;	
 	width: 100%;
 }
 
 header h1 {
 	font-size: 1.5em;
-	/*align-self: center;*/
 	margin-right: auto;
+	color: #FFF;
+	word-spacing: -7px;
+}
+
+header h1 span {
+	font-weight: 100;
+	/*font-size: 0.7em;*/
 }
 
 header ul {
@@ -60,13 +67,52 @@ header ul {
 
 header li {
 	align-self: center;
-	/*flex: 0 1 auto;*/
 	padding: 0 1em;
-	border: 1px solid black;
+	/*flex: 0 1 auto;*/
+	/*border: 1px solid black;*/
+}
+
+li.notification {
+	position: relative;
+	margin-right: 0.5em;
+}
+span.notification-notice {
+	position: absolute;
+	top: -5px;
+	right: 10px;
+	background-color: #85db81;
+	color: #fff;
+	border-radius: 50%;
+	padding: 1px 3px;
+}
+
+header li.flex {
+	border-left: 2px dotted #5d61bf;
+	padding-left: 1em;
+}
+
+img[src="icons/icon-bell.svg"] {
+	width: 30px;
+	height: 30px;
+}
+
+
+header li img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+header li p {
+	align-self: center;
+	color: #FFF;
+	font-weight: 100;
+	margin-left: 1em;
 }
 
 header li:first-child {
-	background: green;
+	
+	/*background: green;*/
 	/*flex: 1 0 auto;*/
 }/* ----- end HEADER section ----- */
 
